@@ -1,0 +1,133 @@
+@import "variables.scss";
+
+@font-face{
+	font-family: 'CoconOT-regular';
+	src: url('../fonts/CoconOT/CoconOT-Regular.otf');
+}
+@font-face{
+	font-family: 'CoconOT-bold';
+	src: url('../fonts/CoconOT/CoconOT-Bold.otf');
+}
+@font-face{
+	font-family: 'CoconOT-light';
+	src: url('../fonts/CoconOT/CoconOT-Light.otf');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: open sans, sans-serif;
+}
+
+.bold{
+	font-family: "CoconOT-bold", open sans, sans-serif;
+}
+
+header{
+	z-index: 5;
+	display: flex;
+	justify-content: space-between;
+	padding: 40px;
+	position: fixed;
+	top: 0;
+	width: calc(100vw - 80px);
+
+	a{
+		#logo{
+			transition: all 300ms ease-in-out;
+			filter: invert(0);
+		}
+		#insitu-logo{
+			transition: all 300ms ease-in-out;
+			filter: grayscale(0%);
+			-webkit-filter: grayscale(0%);
+			-moz-filter: grayscale(0%);
+			-ms-filter: grayscale(0%);
+			-o-filter: grayscale(0%);
+		}
+	}
+	a:hover{
+		#logo{
+			filter: invert(1);
+		}
+		#insitu-logo{
+			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			-ms-filter: grayscale(100%);
+			-o-filter: grayscale(100%);
+		}
+	}
+
+	ul{
+		display: flex;
+		align-items: center;
+		list-style: none;
+
+		li{
+			margin-left: 20px;
+
+			a img, img{
+				width: 50px;
+				height: 50px;
+				transition: transform 300ms ease-in-out;
+			}
+		}
+		li:hover{
+				a img, img{
+					transform: rotate(360deg);
+				}
+			}
+		#menu-burger{
+			position: relative;
+			
+			#submenu{
+				z-index: 999;
+				right: -550px;
+				top: 55px;
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				background: $beige;
+				width: 400px;
+				padding: 50px;
+				box-shadow: -3px 5px 5px grey;
+				transition: transform 500ms ease-in-out;
+
+				li{
+					list-style-type: none;
+					margin-bottom: 40px;
+
+					a{
+						text-decoration: none;
+						color: black;
+						font-family: "CoconOT-regular", arial, sans-serif;
+						color: $red;
+					}
+					a:hover{
+						color: black;
+					}
+				}
+
+				li:last-child{
+					margin-bottom: 0px;
+				}
+			}
+		}
+		#menu-burger:hover{
+			#submenu{
+				transform: translate(-500px, 0);
+			}
+		}
+	}
+}
+
+@import "style_index.scss";
+@import "style_insitu.scss";
+@import "style_insitu_other.scss";
+@import "style_methode.scss";
+@import "style_contact.scss";
+@import "style_newsletter.scss";

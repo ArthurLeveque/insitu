@@ -1,0 +1,204 @@
+@import "variables.scss";
+
+.methode-wrap{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: 100%;
+    overflow: hidden;
+
+	main{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		width: 410px;
+		height: 410px;
+		max-width: 550px;
+		max-height: 550px;
+		border-radius: 50%;
+		padding: 70px 70px;
+		position: relative;
+		
+		ul{
+			z-index: 6;
+			position: absolute;
+			list-style-type: none;
+			width: 630px;
+			height: 630px;
+			border-radius: 50%;
+
+			li{
+				position: absolute;
+
+				a{
+					transition: all 0.5s ease-out;
+					text-decoration: none;
+					height: 15px;
+					width: 15px;
+					border-radius: 50%;
+					display: block;
+				}
+			}
+			li:first-child{
+				left: 50%;
+				top: calc(0% - 8px);
+			}
+			li:nth-child(2){
+				right: calc(5% - 4px);
+				top: 25%;
+			}
+			li:nth-child(3){
+				right: calc(5% - 4px);
+				bottom: 25%;
+			}
+			li:nth-child(4){
+				left: calc(5% - 4px);
+				bottom: 25%;
+			}
+			li:nth-child(5){
+				left: calc(5% - 4px);
+				top: 25%;
+			}
+		}
+		p{
+			text-align: center;
+			line-height: 200%;
+		}
+		.methode-title{
+			text-transform: uppercase;
+			font-size: 30px;
+		}
+		#methode-subtitle{
+			font-family: "CoconOT-bold", open sans, sans-serif;
+			font-size: 35px;
+		}
+		#methode-text{
+			font-size: 14px;
+		}
+		.methode-bold{
+			font-weight: bold;
+		}
+	}
+
+	#methode-base{
+		background-color: transparent; 
+		border: 1px solid white;
+
+		p{
+			color: white;
+
+			span{
+				font-size: 35px;
+			}
+		}
+
+		ul{
+			li{
+				a{
+					border: 1px solid white; 
+					background: transparent;
+				}
+				a:hover{
+					background: white;
+				}
+				#active{
+					background: white;
+				}
+			}
+		}
+	}
+	#methode-pink{
+		background-color: $beige;
+
+		#methode-subtitle{
+			color: $pink;
+		}
+		ul{
+			border: 1px solid $pink;
+			li{
+				a{
+					border: 1px solid $pink; 
+					background: white;
+				}
+				a:hover{
+					background: $pink;
+				}
+				#active{
+					background: $pink;
+				}
+			}
+		}
+	}
+	#methode-red{
+		background-color: $beige; 
+
+		#methode-subtitle{
+			color: $red;
+		}
+		ul{
+			border: 1px solid $red;
+			li{
+				a{
+					border: 1px solid $red; 
+					background: white;
+				}
+				a:hover{
+					background: $red;
+				}
+				#active{
+					background: $red;
+				}
+			}
+		}
+	}
+}
+
+#base{
+	background: linear-gradient(137deg, #e2001a, #e2007a);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 6s ease 1;
+    -moz-animation: AnimationName 6s ease 1;
+    -o-animation: AnimationName 6s ease 1;
+    animation: AnimationName 6s ease 1;
+
+	@-webkit-keyframes AnimationName {
+	    0%{background-position:5% 0%}
+	    50%{background-position:96% 100%}
+	    100%{background-position:5% 0%}
+	}
+	@-moz-keyframes AnimationName {
+	    0%{background-position:5% 0%}
+	    50%{background-position:96% 100%}
+	    100%{background-position:5% 0%}
+	}
+	@-o-keyframes AnimationName {
+	    0%{background-position:5% 0%}
+	    50%{background-position:96% 100%}
+	    100%{background-position:5% 0%}
+	}
+	@keyframes AnimationName {
+	    0%{background-position:5% 0%}
+	    50%{background-position:96% 100%}
+	    100%{background-position:5% 0%}
+	}
+}
+
+#immersion{
+	background: no-repeat center url("../img/IMMERSION.jpg") $red;
+	background-size: cover;
+}
+#cap{
+	background: no-repeat center url("../img/CAP_A _ATTEINDRE.jpg") $pink;
+	background-size: cover;
+}
+#tat{
+	background: no-repeat center url("../img/TETE_A_TETE.jpg") $red;
+	background-size: cover;
+}
+#team{
+	background: no-repeat center url("../img/TEAM_DEDIEE.jpg") $pink;
+	background-size: cover;
+}
