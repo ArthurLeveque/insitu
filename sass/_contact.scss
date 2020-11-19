@@ -1,0 +1,382 @@
+@import "variables.scss";
+
+#contact-wrap{
+	min-height: 100vh;
+	width: 100%;
+	background-color: $beige;
+	overflow-x: hidden;
+
+	main{
+		margin-top: 239px; // Hauteur du menu
+		padding: 0 220px; //largeur logo + padding + un peu d'espace
+
+		h1{
+			font-size: 50px;
+			font-weight: normal;
+			span{
+				position: relative;
+
+				&:before{
+					content: "";
+		    		position: absolute;
+		    		width: 200px;
+		    		height: 8px;
+		    		background: black;
+		    		bottom: -10px;
+		    		left: 0;
+				}
+			}
+		}
+
+		#content{
+			display: flex;
+			justify-content: space-between;
+			padding-top: 60px;
+
+			#left-contact, #right-contact{
+				width: 40%;
+			}
+
+			#left-contact{
+				img{
+					width: 500px;
+					height: 300px;
+				}
+				
+				#names{
+					display: flex;
+					justify-content: space-around;
+					margin-top: 30px;
+					margin-bottom: 50px;
+					width: 500px;
+
+					div{
+						display: flex;
+						flex-direction: column;
+
+						p{
+							margin-bottom: 10px;
+							font-size: 18px;
+							margin-bottom: 30px;
+
+							span{
+								position: relative;
+
+								&:before{
+									content: "";
+						    		position: absolute;
+						    		width: 55px;
+						    		height: 8px;
+						    		background: black;
+						    		bottom: -15px;
+						    		left: 0;
+								}
+							}
+						}
+						.names-links{
+							display: flex;
+							justify-content: flex-start;
+							flex-direction: row;
+							
+							a{
+								position: relative;
+								&:first-child{
+									width: 50px;
+									height: 50px;
+									margin-right: 10px;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+
+									img{
+										width: 23px;
+										height: 23px;
+									}
+								}
+								&:first-child:before{
+									content: "";
+									position: absolute;
+									border: 9px solid black;
+									border-radius: 50%;
+									height: 30px;
+									width: 30px;
+									left: 0;
+									bottom: 0;
+									display: inline-block;
+								}
+								img{
+									width: 50px;
+									height: 50px;
+								}
+							}
+						}
+					}
+				}
+				#contact-to-nl{
+					margin-bottom: 50px;
+
+					#contact-to-nl-bold{
+						font-weight: bold;
+					}
+					a{
+						text-decoration: none;
+
+						span{
+							color: red;
+						}
+						&:hover{
+							span{
+								color: black;
+							}
+						}
+					} 
+				}
+			}
+			#right-contact{
+				padding-top: 190px; 
+
+				p{
+					font-size: 25px;
+					margin-bottom: 40px;
+				}
+				form{
+					display: flex;
+					flex-direction: column;
+					margin-top: 10px;
+					width: 60%;
+
+					input, select, button{
+						width: 100%;
+						border: 8px solid black;
+						padding: 10px 5px;
+						margin-bottom: 10px;
+						box-sizing: inherit;
+						transition: all 0.5s ease-out;
+
+						&:focus{
+							border-color: $red;
+						}
+					}
+					button{
+						background: black;
+						text-align: left;
+						color: white;
+
+						&:hover{
+							cursor: pointer;
+							background: white;
+							color: black;
+						}
+					}
+					div{
+						margin-top: 20px;
+						margin-left: 15px;
+						input{
+							width: inherit;
+							margin-right: 5px;
+						}
+						label{
+							line-height: 200%;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+		#bot-contact{
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			padding-bottom: 10px;
+
+			#adress{
+				width: 70%;
+				p{
+					font-size: 45px;
+					margin-bottom: 40px;
+					span{
+						position: relative;
+						&:after{
+							content: "";
+				    		position: absolute;
+				    		width: 55px;
+				    		height: 8px;
+				    		background: black;
+				    		bottom: -8px;
+				    		left: 0;
+						}
+					}
+				}
+				#adress-flex{
+					display: flex;
+					align-items: center;
+
+					img{
+					    width: 260px;
+						height: 550px;
+						filter: grayscale(100%);
+					    -webkit-filter: grayscale(100%);
+					    -moz-filter: grayscale(100%);
+					    -ms-filter: grayscale(100%);
+					    -o-filter: grayscale(100%);
+					}
+					ul{
+						list-style-type: none;
+						margin-left: 45px;
+						li{
+							margin-bottom: 10px;
+
+							&:first-child{
+								font-size: 30px;
+								margin-bottom: 20px;
+							}
+							&:last-child{
+								position: relative;
+								&:before{
+									content: "";
+						    		position: absolute;
+						    		width: 55px;
+						    		height: 8px;
+						    		background: black;
+						    		bottom: -15px;
+						    		left: 0;
+								}
+							}
+							a{
+								text-decoration: none;
+								color: black;
+							}
+						}
+						li:last-child{
+							margin-bottom: 0px;
+						}
+					}
+				}
+			}
+			#legal{
+				padding-bottom: 10px;
+				
+				a{
+					text-decoration: none;
+					position: relative;
+					color: black;
+					font-weight: bold;
+
+					&:before{
+						content: "";
+			    		position: absolute;
+			    		width: 55px;
+			    		height: 8px;
+			    		background: black;
+			    		bottom: -10px;
+			    		left: 0;
+					}
+				}
+			}
+		}
+	}
+	@media #{$large} {
+		main{
+			#content{
+				flex-direction: column;
+				#left-contact, #right-contact{
+					width: 100%;
+				}
+				#contact-to-nl{
+					margin-bottom: 20px;
+				}
+				#right-contact{
+					padding-top: 0px; 
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1200px) {
+		main{
+			h1{
+				font-size: 40px;
+				span:before{
+					display: none;
+				}
+			}
+			#content{
+				#right-contact{
+					form{
+						width: 100%;
+						max-width: 540px;
+					}
+				}
+			}
+			#bot-contact{
+				margin-top: 40px;
+				flex-direction: column;
+				align-items: flex-start;
+				#adress, #legal{
+					width: 100%;
+				}
+				#legal{
+					margin-top: 40px;
+					text-align: right;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 1000px) {
+		header{
+			background-color: white;
+			padding: 20px;
+			width: calc(100vw - 40px);
+			#logo{
+				height: 60px;
+				width: 80px;
+			}
+		}
+		main{
+			padding: 0 20px;
+		}
+	}
+	@media #{$medium} {
+		main{
+			#content{
+				#left-contact{
+					img{
+						width: 100%;
+						height: auto;
+					}
+					#names{
+						width: auto;
+						flex-direction: column;
+					}
+				}
+				#right-contact form{
+					input, select, button{
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 500px) {
+		main{
+			#bot-contact #adress{
+				p{
+					font-size: 40px;
+				}
+				#adress-flex{
+					img{
+						display: none;
+					}
+					ul{
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 350px) {
+		header #logo{
+			height: 80px;
+			width: 80px;
+		}
+	}
+}

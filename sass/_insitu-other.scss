@@ -1,0 +1,168 @@
+@import "variables.scss";
+
+#insitu-other{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	min-height: 100vh;
+	width: 100%;
+	overflow: hidden;
+	background: repeat url('../img/circle.svg') $beige;
+
+	.other-bold{
+		font-weight: bold;
+	}
+
+	main{
+		width: 100%;
+		height: 100vh;
+		position: relative;
+
+		#other-left, #other-right{
+			z-index: 4;
+
+			.other-text{
+				width: 350px;
+
+				h1, h2{
+					color: $pink;
+					font-weight: normal;
+					line-height: 110%;
+				}
+				h1, h2, p{
+					margin-bottom: 20px;
+				}
+				p, ul li{
+					line-height: 200%;
+				}
+			}
+			.pink{
+				h1, h2{
+					color: $pink;
+				}
+				ul li::before{
+					color: $pink;
+				}
+			}
+			.red{
+				h1, h2{
+					color: $red;
+				}
+				ul li::before{
+					color: $red;
+				}
+			}
+		}
+		#other-left{
+			position: absolute;
+			top: 190px;
+			left: 20%;
+
+			.other-text{
+				a{
+					color: white;
+					background: black;
+					text-transform: uppercase;
+					padding: 10px 15px;
+					text-decoration: none;
+					box-shadow: 5px 5px 5px grey;
+
+					span{
+						text-decoration: underline;
+					}
+
+					&:hover{
+						color: black;
+						background: $beige;
+					}
+				}
+
+				&:before{
+					position: absolute;
+					padding: 450px;
+					top: -225px;
+		    		left: -235px;
+		    		transform: rotate(35deg);
+					z-index: -1;
+					content: "";
+					background: no-repeat center url('../img/bulle_02.svg');
+					background-size: cover;
+				}
+			}
+		}
+		
+		#other-right{
+			position: absolute;
+			bottom: 190px;
+			right: 20%;
+
+			.other-text{
+				ul{
+					list-style-type: none;
+					margin-left: 20px;
+
+					li::before {
+						content: "•";
+  						display: inline-block;
+  						width: 1em;
+ 						margin-left: -1em
+ 					}
+				}
+			}
+
+			&:before{
+				position: absolute;
+				padding: 350px;
+				top: -245px;
+	    		left: -185px;
+	    		transform: rotate(-50deg);
+				z-index: -1;
+				content: "";
+				background: no-repeat center url('../img/bulle_01.svg');
+				background-size: cover;
+			}
+		}
+	}
+}
+@media #{$large} {
+	#insitu-other{
+		overflow: inherit;
+		overflow-x: hidden; 
+		flex-direction: inherit;
+		justify-content: inherit;
+		align-items: inherit;
+		main{
+			margin-top: 239px;
+			padding: 0 220px;
+			#other-left, #other-right{
+				position: initial;
+				width: 100%;
+				&:before{
+					display: none;
+				}
+				.other-text{
+					width: 100%;
+				}
+			}
+			#other-left{
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1000px) {
+	#insitu-other{
+		main{
+			padding: 0 100px;
+		}
+	}
+}
+@media screen and (max-width: 375px) {
+	#insitu-other{
+		main{
+			margin-top: 200px;
+			padding: 0 20px;
+		}
+	}
+}
